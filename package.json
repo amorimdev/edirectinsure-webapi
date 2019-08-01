@@ -15,6 +15,7 @@
   "scripts": {
     "start": "node srv/start.js",
     "start-dev": "node --inspect=9205 srv/start.js",
+    "test": "echo 'No test specified'",
     "fixStyle": "./node_modules/eslint/bin/eslint.js ./ --fix"
   },
   "husky": {
