@@ -7,9 +7,10 @@ RUN npm config set unsafe-perm true
 
 RUN apk add --no-cache --virtual git
 
-WORKDIR /src
+WORKDIR /edirectinsure
 
 ADD / ./
+
 RUN npm install
 
 # Run the container under "node" user by default
