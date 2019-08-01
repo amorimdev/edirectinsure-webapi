@@ -34,6 +34,7 @@ module.exports.default = [
       description: 'Create a task',
       notes: 'Returns 201 with the created task',
       tags: [ 'api' ],
+      auth: 'jwt',
       handler: CreateHandler,
       validate: CreateValidate
     }

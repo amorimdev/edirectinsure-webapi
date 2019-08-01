@@ -4,12 +4,6 @@ const Joi = require('@hapi/joi')
 
 module.exports = {
   create: {
-    status: Joi.string()
-      .valid([ 'open', 'closed' ])
-      .default('open')
-      .required()
-      .description('the status of task'),
-
     description: Joi.string()
       .trim()
       .required()
@@ -25,7 +19,17 @@ module.exports = {
     _id: Joi.string()
       .trim()
       .optional()
-      .description('the id of task')
+      .description('the id of task'),
+
+    status: Joi.string()
+      .valid([ 'open', 'closed' ])
+      .optional()
+      .description('the status of task'),
+
+    project: Joi.string()
+      .trim()
+      .optional()
+      .description('the project of task')
   },
 
   update: {

@@ -7,7 +7,8 @@ const { task } = require('../../validate')
  * @description User Validators
  */
 module.exports.SelectValidate = {
-  params: task.select
+  params: pick(task.select, [ '_id', 'status' ]),
+  query: pick(task.select, [ 'project' ])
 }
 
 module.exports.CreateValidate = {
