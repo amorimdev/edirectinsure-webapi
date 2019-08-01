@@ -1,0 +1,59 @@
+{
+  "name": "edirectinsure-webapi",
+  "version": "1.0.0",
+  "description": "EDirectInsure Webapi service",
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "files": [
+    "srv",
+    "src",
+    "app",
+    "handler",
+    "validate"
+  ],
+  "scripts": {
+    "start": "node srv/start.js",
+    "start-dev": "node --inspect=9205 srv/start.js",
+    "fixStyle": "./node_modules/eslint/bin/eslint.js ./ --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "./node_modules/eslint/bin/eslint.js ./"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:amorimdev/edirectinsure-webapi.git"
+  },
+  "author": "Jhonatan Amorim <amorim.dev@gmail.com>",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/amorimdev/edirectinsure-webapi#readme",
+  "dependencies": {
+    "@hapi/hapi": "^18.3.0",
+    "@hapi/inert": "^5.2.0",
+    "@hapi/joi": "^15.0.3",
+    "@hapi/vision": "^5.5.2",
+    "glob": "^7.1.2",
+    "hapi-auth-jwt2": "^8.6.1",
+    "hapi-cors-headers": "github:Btime/hapi-cors-headers",
+    "hapi-rate-limit": "github:Btime/hapi-rate-limit",
+    "hapi-swagger": "github:Btime/hapi-swagger",
+    "lodash": "^4.17.11",
+    "seneca": "^3.12.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^5.5.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "faker": "^4.1.0",
+    "husky": "^0.15.0-rc.3",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1"
+  }
+}
