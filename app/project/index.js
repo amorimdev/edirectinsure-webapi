@@ -34,6 +34,7 @@ module.exports.default = [
       description: 'Create a project',
       notes: 'Returns 201 with the created project',
       tags: [ 'api' ],
+      auth: 'jwt',
       handler: CreateHandler,
       validate: CreateValidate
     }

@@ -7,12 +7,7 @@ module.exports = {
     name: Joi.string()
       .trim()
       .required()
-      .description('the name of project'),
-
-    user: Joi.string()
-      .trim()
-      .required()
-      .description('the user of project')
+      .description('the name of project')
   },
 
   select: {
@@ -31,12 +26,7 @@ module.exports = {
     name: Joi.string()
       .trim()
       .optional()
-      .description('the name of project'),
-
-    user: Joi.string()
-      .trim()
-      .optional()
-      .description('the user of project')
+      .description('the name of project')
   },
 
   delete: {
