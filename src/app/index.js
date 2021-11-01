@@ -9,7 +9,7 @@ const { registerFormatRequest } = require('./format-request')
 const { registerFormatResponse } = require('./format-response')
 
 const ServerOptions = {
-  port: process.env.APP_PORT || 3000,
+  port: process.env.APP_PORT || process.env.PORT || 3000,
   routes: {
     validate: { options: { abortEarly: false } },
     cors: {
