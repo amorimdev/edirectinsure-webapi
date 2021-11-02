@@ -1,6 +1,5 @@
 'use strict'
 
-const { act } = require('../app/seneca')
 const { defineAuthValidTokenPattern } = require('./patterns')
 const { defineAuthValidTokenPayload } = require('./payloads')
 
@@ -21,6 +20,7 @@ class AuthJwt {
     const { authorization: token } = headers
     const pattern = defineAuthValidTokenPattern()
     const payload = defineAuthValidTokenPayload(token)
+    const { act } = require('../app/seneca')
     return act(pattern, payload)
       .then(({ status: isValid }) => ({ isValid, credentials }))
       .catch(() => ({ isValid: false }))
