@@ -41,6 +41,7 @@
     "hapi-rate-limit": "github:Btime/hapi-rate-limit",
     "hapi-swagger": "github:Btime/hapi-swagger",
     "lodash": "^4.17.11",
+    "seneca-amqp-transport": "^2.2.0",
     "seneca": "^3.12.0"
   },
   "devDependencies": {
